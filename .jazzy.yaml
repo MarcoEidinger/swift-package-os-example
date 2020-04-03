@@ -1,0 +1,8 @@
+author: Marco Eidinger
+author_url: https://eidinger.us
+root_url: https://realm.github.io/SwiftLint/
+github_url: https://github.com/MarcoEidinger/swift-package-os-examplet
+github_file_prefix: https://github.com/MarcoEidinger/swift-package-os-example/tree/master
+theme: apple
+clean: true
+copyright: '© 2020 [Marco Eidinger](https://eidinger.us) under MIT.'
