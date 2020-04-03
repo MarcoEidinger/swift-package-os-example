@@ -15,7 +15,7 @@
 		8AD3F6A92436ECAE00BB311F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AD3F6A72436ECAE00BB311F /* LaunchScreen.storyboard */; };
 		8AD3F6B42436ECAE00BB311F /* TestAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD3F6B32436ECAE00BB311F /* TestAppUITests.swift */; };
 		8AD3F6C32436EE7000BB311F /* SimpleSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD3F6C12436EE3F00BB311F /* SimpleSwiftUIView.swift */; };
-		8AD3F6C42436EE7400BB311F /* swift_package_os_example.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD3F6C22436EE3F00BB311F /* swift_package_os_example.swift */; };
+		8AD3F6C62436F32000BB311F /* MainApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD3F6C52436F32000BB311F /* MainApi.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +41,7 @@
 		8AD3F6B32436ECAE00BB311F /* TestAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAppUITests.swift; sourceTree = "<group>"; };
 		8AD3F6B52436ECAE00BB311F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8AD3F6C12436EE3F00BB311F /* SimpleSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleSwiftUIView.swift; sourceTree = "<group>"; };
-		8AD3F6C22436EE3F00BB311F /* swift_package_os_example.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swift_package_os_example.swift; sourceTree = "<group>"; };
+		8AD3F6C52436F32000BB311F /* MainApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainApi.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,8 +132,8 @@
 		8AD3F6C02436EE3F00BB311F /* swift-package-os-example */ = {
 			isa = PBXGroup;
 			children = (
+				8AD3F6C52436F32000BB311F /* MainApi.swift */,
 				8AD3F6C12436EE3F00BB311F /* SimpleSwiftUIView.swift */,
-				8AD3F6C22436EE3F00BB311F /* swift_package_os_example.swift */,
 			);
 			path = "swift-package-os-example";
 			sourceTree = "<group>";
@@ -241,7 +241,7 @@
 			files = (
 				8AD3F69D2436ECAB00BB311F /* AppDelegate.swift in Sources */,
 				8AD3F69F2436ECAB00BB311F /* SceneDelegate.swift in Sources */,
-				8AD3F6C42436EE7400BB311F /* swift_package_os_example.swift in Sources */,
+				8AD3F6C62436F32000BB311F /* MainApi.swift in Sources */,
 				8AD3F6C32436EE7000BB311F /* SimpleSwiftUIView.swift in Sources */,
 				8AD3F6A12436ECAB00BB311F /* ContentView.swift in Sources */,
 			);
