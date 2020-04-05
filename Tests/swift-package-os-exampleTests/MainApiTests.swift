@@ -9,6 +9,10 @@ final class MainApiTests: XCTestCase {
         XCTAssertEqual(MainApi().text, "Hello, World!")
     }
 
+	func testMeaningOfLife() {
+        XCTAssertEqual(MainApi().meaningOfLife, 42)
+    }
+
     static var allTests = [
         ("testExample", testExample),
     ]
