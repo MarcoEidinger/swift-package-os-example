@@ -12,12 +12,10 @@ jobs:
     runs-on: macos-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Build
-      run: |
-        swift package generate-xcodeproj
-        xcodebuild -sdk iphoneos -scheme swift-package-os-example-Package
-    - name: Run tests
-      run: |
-        swift package generate-xcodeproj
-        xcodebuild -scheme swift-package-os-example-Package -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 11' build test
+	  - uses: actions/checkout@v2
+	  - name: Generate Xcode project
+      run: swift package generate-xcodeproj
+    - name: Build Package
+      run: xcodebuild -sdk iphoneos -scheme swift-package-os-example-Package
+    - name: Run Tests
+      run: xcodebuild -scheme swift-package-os-example-Package -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 11' build test
