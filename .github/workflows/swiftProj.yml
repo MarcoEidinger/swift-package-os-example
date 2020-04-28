@@ -16,6 +16,6 @@ jobs:
     - name: Generate Xcode project
       run: swift package generate-xcodeproj
     - name: Build Package
-      run: xcodebuild -sdk iphoneos -scheme swift-package-os-example-Package
+      run: xcodebuild -sdk iphoneos -project swift-package-os-example.xcodeproj -scheme swift-package-os-example-Package
     - name: Run Tests
-      run: xcodebuild -scheme swift-package-os-example-Package -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 11' build test
+      run: xcodebuild -project swift-package-os-example.xcodeproj -scheme swift-package-os-example-Package -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 11' build test
