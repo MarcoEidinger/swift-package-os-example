@@ -1,0 +1,23 @@
+name: SwiftProj
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: macos-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build
+      run: |
+        swift package generate-xcodeproj
+        xcodebuild -sdk iphoneos -scheme swift-package-os-example-Package
+    - name: Run tests
+      run: |
+        swift package generate-xcodeproj
+        xcodebuild -scheme swift-package-os-example-Package -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 11' build test
