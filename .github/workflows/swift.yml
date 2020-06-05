@@ -20,7 +20,7 @@ jobs:
     - name: Run code coverage
       run: |
         swift package generate-xcodeproj
-        xcodebuild test -enableCodeCoverage YES -scheme swift-package-os-example-Package
+        xcodebuild -enableCodeCoverage YES -project swift-package-os-example.xcodeproj -scheme swift-package-os-example-Package -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 11' build test
     - uses: codecov/codecov-action@v1
       with:
         fail_ci_if_error: true
