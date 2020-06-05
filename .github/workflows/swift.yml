@@ -21,6 +21,12 @@ jobs:
       run: |
         swift package generate-xcodeproj
         xcodebuild -enableCodeCoverage YES -project swift-package-os-example.xcodeproj -scheme swift-package-os-example-Package -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 11' build test
+        cd Build/Build/ProfileData
+        cd  $(ls -d */|head -n 1)
+        directory=${PWD##*/} 
+        pathCoverage=Build/Build/ProfileData/${directory}/Coverage.profdata
+        cd ../../../../
+        xcrun llvm-cov export -format="lcov" -instr-profile $pathCoverage Build/Build/Products/Debug-iphonesimulator/swift-package-os-example.app/swift-package-os-example > info.lcov
     # does it work now?
     - uses: codecov/codecov-action@v1.0.7
       with:
