@@ -21,6 +21,8 @@ jobs:
       run: |
         swift package generate-xcodeproj
         xcodebuild -enableCodeCoverage YES -project swift-package-os-example.xcodeproj -scheme swift-package-os-example-Package -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 11' build test
+        xcrun llvm-cov export -format="lcov" .build/debug/swift-package-os-examplePackageTests.xctest/Contents/MacOS/$swift-package-os-examplePackageTests -instr-profile .build/debug/codecov/default.profdata > info.lcov
     - name: Update Code Coverage
-      run: |
-        bash <(curl -s https://codecov.io/bash) -J 'swift-package-os-example'
+      run: bash <(curl https://codecov.io/bash)
+      env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
