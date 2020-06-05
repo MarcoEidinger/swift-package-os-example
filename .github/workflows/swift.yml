@@ -21,6 +21,7 @@ jobs:
       run: |
         swift package generate-xcodeproj
         xcodebuild -enableCodeCoverage YES -project swift-package-os-example.xcodeproj -scheme swift-package-os-example-Package -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 11' build test
+    # does it work now?
     - uses: codecov/codecov-action@v1.0.7
       with:
         fail_ci_if_error: true
