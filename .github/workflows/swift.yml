@@ -25,6 +25,6 @@ jobs:
 #slather
     # xcrun llvm-cov export -format="lcov" .build/debug/swift-package-os-examplePackageTests.xctest/Contents/MacOS/$swift-package-os-examplePackageTests -instr-profile .build/debug/codecov/default.profdata > info.lcov
     - name: Update Code Coverage
-      run: bash <(curl https://codecov.io/bash) -d -f Tests/cobertura.xml
+      run: bash <(curl https://codecov.io/bash) -d #-f Tests/cobertura.xml
       env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
