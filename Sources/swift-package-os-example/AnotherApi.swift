@@ -12,4 +12,6 @@ public struct AnotherApi {
     public var text = "Hello, World!"
     /// property to return meaning of life as Integer
     public var meaningOfLife = 42
+
+    public init() {}
 }

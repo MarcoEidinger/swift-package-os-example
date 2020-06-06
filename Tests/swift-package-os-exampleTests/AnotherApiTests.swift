@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import swift_package_os_example
+import swift_package_os_example
 
 class AnotherApiTests: XCTestCase {
     func testExample() {
