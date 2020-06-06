@@ -1,0 +1,5 @@
+coverage_service: cobertura_xml
+xcodeproj: swift-package-os-example.xcodeproj
+scheme: swift-package-os-example-Package
+source_directory: Sources/
+output_directory: Tests/
