@@ -21,4 +21,4 @@ jobs:
       run: |
         swift package generate-xcodeproj
         xcodebuild -enableCodeCoverage YES -project swift-package-os-example.xcodeproj -scheme swift-package-os-example-Package -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 11' build test | xcpretty
-        bash <(curl https://codecov.io/bash) -d
+        bash <(curl https://codecov.io/bash) -cF ios
