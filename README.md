@@ -15,7 +15,7 @@ The main purpose of this repository to illustrate the use of best practices and 
 - **PR utilities** like automatic rebase which can be triggered by [commenting PR](https://github.com/cirrus-actions/rebase); powered by GitHub action
 - Use **templates** for issues and pull requests, see [ISSUE_TEMPLATE.md](./.github/ISSUE_TEMPLATE.md) and [PULL_REQUEST_TEMPLATE.md](./.github/PULL_REQUEST_TEMPLATE.md) 
 - Define code owners which get automatically requested for code review on a pull request, see [CODEOWNERS](./.github/CODEOWNERS)
-- **Automatic versioning and changelog generation** with help of conventional commits and [tooling](https://github.com/conventional-changelog/standard-version)
+- **Automatic versioning and changelog generation** with the help of conventional commits and [tooling](https://github.com/conventional-changelog/standard-version)
 
 FYI: the first release was created manually with command
 
