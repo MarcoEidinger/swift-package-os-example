@@ -6,7 +6,8 @@ final class MainApiTests: XCTestCase {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct
         // results.
-        XCTAssertEqual(MainApi().text, "Hello, World!")
+		var anyWorld: Any = "Hello, World!"
+        XCTAssertEqual(MainApi().text, anyWorld as! String)
     }
 
 	func testMeaningOfLife() {
