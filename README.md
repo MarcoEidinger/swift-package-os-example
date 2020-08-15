@@ -2,7 +2,7 @@
 
 [![Swift Build and Unit Test](https://github.com/MarcoEidinger/swift-package-os-example//workflows/Swift/badge.svg)](https://github.com/MarcoEidinger/swift-package-os-example/actions) [![TestApp](https://github.com/TeamEidinger/swift-package-os-example/workflows/TestApp/badge.svg)](https://github.com/MarcoEidinger/swift-package-os-example/actions) [![codebeat badge](https://codebeat.co/badges/1cd86e5b-ddff-4f63-ba11-a2341df3dd62)](https://codebeat.co/projects/github-com-marcoeidinger-swift-package-os-example-master) [![codecov.io](https://codecov.io/gh/TeamEidinger/swift-package-os-example/branch/master/graphs/badge.svg)](https://codecov.io/gh/TeamEidinger/swift-package-os-example/branch/master)
 
-The main purpose of this repository to illustrate the use of best practices and tooling when it comes to maintaining a Swift package as an Open Source project on github.com
+The main purpose of this repository is to illustrate the use of best practices and tooling when it comes to maintaining a Swift package as an Open Source project on github.com
 
 - Use SwiftLint to **enforce code style**, see [swiftlint.yml](./.swiftlint.yml)
 - Use Markups and Jazzy to **generate documentation from code**, see [jazzy.yaml](./.jazzy.yaml)
