@@ -23,6 +23,19 @@ jobs:
       - uses: MarcoEidinger/gha-swift-package-update@1.0.0
         with:
           changesManifest: true
+      - name: Create Pull Request
+        if: failure()
+        uses: peter-evans/create-pull-request@v3
+        with:
+          token: ${{ secrets.PAT_ME_REPO }}
+          commit-message: 'chore: update package dependencies'
+          committer: GitHub <noreply@github.com>
+          author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
+          signoff: false
+          branch: updatePackageDepedencies
+          delete-branch: true
+          title: 'Update Package Dependencies'
+          draft: false
         
   # This workflow contains a single job called "greet"
   dependency-check:
