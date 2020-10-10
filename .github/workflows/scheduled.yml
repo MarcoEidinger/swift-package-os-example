@@ -14,3 +14,13 @@ jobs:
         stale-issue-message: 'This issue is stale because it has been open 30 days with no activity. Remove stale label or comment or this will be closed in 5 days'
         days-before-stale: 30
         days-before-close: 5
+        
+  # Close stale issues
+  OutdatedDependencyCheck:
+    runs-on: macos-latest
+    steps:
+    - name: swift package update --dry-run
+      run: |
+        OUTPUT=$(swift package update --dry-run)
+        echo "$OUTPUT"
+        echo "$OUTPUT" | grep -q "0 dependencies have changed."
