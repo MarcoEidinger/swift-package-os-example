@@ -21,8 +21,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: MarcoEidinger/gha-swift-package-update@main
-        with:
-          changesManifest: 'true'
       - name: Create Pull Request
         if: failure()
         uses: peter-evans/create-pull-request@v3
