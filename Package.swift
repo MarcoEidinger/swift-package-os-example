@@ -13,7 +13,7 @@ let package = Package(
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
-        .package(url: "https://github.com/objcio/tiny-networking", from: "0.2.0"),
+        .package(url: "https://github.com/objcio/tiny-networking", .exact("0.4.0"),
         .package(url: "https://github.com/marmelroy/Zip.git", .exact("2.0.0"))
     ],
     targets: [
