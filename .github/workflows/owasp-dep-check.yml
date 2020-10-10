@@ -13,13 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - id: doo
-        uses: MarcoEidinger/gha-swift-package-update@main
-        with:
-          status:  ${{ steps.doo.outputs.status }}
-      - run: |
-          echo "Done"
-          echo ${{ steps.doo.outputs.status }}
+      - uses: MarcoEidinger/gha-swift-package-update@main
   # This workflow contains a single job called "greet"
   dependency-check:
     # The type of runner that the job will run on
