@@ -19,6 +19,7 @@ jobs:
   OutdatedDependencyCheck:
     runs-on: macos-latest
     steps:
+    - uses: actions/checkout@v2
     - name: swift package update --dry-run
       run: |
         OUTPUT=$(swift package update --dry-run)
