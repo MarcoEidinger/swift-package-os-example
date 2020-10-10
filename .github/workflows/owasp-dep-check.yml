@@ -22,7 +22,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: MarcoEidinger/gha-swift-package-update@1.0.0
         with:
-          changesManifest: true
+          changesManifest: 'true'
       - name: Create Pull Request
         if: failure()
         uses: peter-evans/create-pull-request@v3
