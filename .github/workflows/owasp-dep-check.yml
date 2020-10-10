@@ -9,6 +9,17 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
+  spm-update-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - id: doo
+        uses: MarcoEidinger/gha-swift-package-update@main
+        with:
+          status:  ${{ steps.doo.outputs.status }}
+      - run: |
+          echo "Done"
+          echo ${{ steps.doo.outputs.status }}
   # This workflow contains a single job called "greet"
   dependency-check:
     # The type of runner that the job will run on
