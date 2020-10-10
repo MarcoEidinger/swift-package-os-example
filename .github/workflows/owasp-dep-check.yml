@@ -29,13 +29,10 @@ jobs:
         with:
           token: ${{ secrets.PAT_ME_REPO }}
           commit-message: 'chore: update package dependencies'
-          committer: GitHub <noreply@github.com>
-          author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
-          signoff: false
           branch: updatePackageDepedencies
           delete-branch: true
-          title: 'Update Package Dependencies'
-          draft: false
+          title: 'chore: update package dependencies'
+          body: ''
         
   # This workflow contains a single job called "greet"
   dependency-check:
