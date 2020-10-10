@@ -20,7 +20,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: sbertix/spm-dependencies-checker@master
       - uses: MarcoEidinger/gha-swift-package-update@main
         
   # This workflow contains a single job called "greet"
