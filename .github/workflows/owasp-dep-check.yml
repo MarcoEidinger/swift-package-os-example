@@ -9,12 +9,20 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
+  
+  OutdatedDependencyCheck:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: sbertix/spm-dependencies-checker@master
+     
   spm-update-check:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - uses: sbertix/spm-dependencies-checker@master
       - uses: MarcoEidinger/gha-swift-package-update@main
+        
   # This workflow contains a single job called "greet"
   dependency-check:
     # The type of runner that the job will run on
