@@ -14,13 +14,13 @@ jobs:
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: sbertix/spm-dependencies-checker@1.0.0
+      - uses: sbertix/spm-dependencies-checker@master
      
   spm-update-check:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: MarcoEidinger/gha-swift-package-update@main
+      - uses: MarcoEidinger/gha-swift-package-update@1.0.0
         
   # This workflow contains a single job called "greet"
   dependency-check:
