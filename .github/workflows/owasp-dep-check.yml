@@ -22,7 +22,7 @@ jobs:
       if: failure()
       uses: peter-evans/create-pull-request@v3
       with:
-        token: ${{ secrets.PAT }}
+        token: ${{ secrets.PAT_ME_REPO }}
         commit-message: 'chore: update package dependencies'
         branch: updatePackageDepedencies
         delete-branch: true
