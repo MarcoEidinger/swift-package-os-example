@@ -10,29 +10,25 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   
-  OutdatedDependencyCheck:
-    runs-on: macos-latest
+  spm-dep-check:
+    runs-on: ubunut-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: sbertix/spm-dependencies-checker@master
-     
-  spm-update-check:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: MarcoEidinger/gha-swift-package-update@main
-        with:
-          isMutating: false
-      - name: Create Pull Request
-        if: failure()
-        uses: peter-evans/create-pull-request@v3
-        with:
-          token: ${{ secrets.PAT_ME_REPO }}
-          commit-message: 'chore: update package dependencies'
-          branch: updatePackageDepedencies
-          delete-branch: true
-          title: 'chore: update package dependencies'
-          body: ''
+    - uses: actions/checkout@v1
+    - name: Check Swift package dependencies
+      uses: MarcoEidinger/swift-package-dependencies-check@1.0.0
+      with:
+        isMutating: true
+    - name: Create Pull Request
+      if: failure()
+      uses: peter-evans/create-pull-request@v3
+      with:
+        token: ${{ secrets.PAT }}
+        commit-message: 'chore: update package dependencies'
+        branch: updatePackageDepedencies
+        delete-branch: true
+        title: 'chore: update package dependencies'
+        body: ''
+        draft: false
         
   # This workflow contains a single job called "greet"
   dependency-check:
