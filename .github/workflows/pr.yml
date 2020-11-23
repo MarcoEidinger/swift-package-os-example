@@ -14,9 +14,6 @@ jobs:
       - uses: actions/checkout@v2
     #   - name: Check for homebrew updates
     #     run: brew update
-      - name: Install Mint
-        run: |
-          brew upgrade mint || brew install mint || true
       - name: Cache Mint packages
         id: mint-cache
         uses: actions/cache@v2
@@ -24,6 +21,9 @@ jobs:
           path: ${{ env.MINT_PATH }}
           key: ${{ runner.os }}-mint-${{ hashFiles('**/Mintfile') }}
           restore-keys: ${{ runner.os }}-mint-
+      - name: Install Mint
+        run: |
+          brew upgrade mint || brew install mint || true
       - name: Install Mint dependencies
         if: steps.mint-cache.outputs.cache-hit != 'true'
         run: mint bootstrap
