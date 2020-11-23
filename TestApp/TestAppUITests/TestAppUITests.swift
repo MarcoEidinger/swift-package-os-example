@@ -9,7 +9,6 @@
 import XCTest
 
 class TestAppUITests: XCTestCase {
-
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
 
@@ -33,7 +32,6 @@ class TestAppUITests: XCTestCase {
 
         let helloWorldStaticText = XCUIApplication().staticTexts["Hello, World!"]
         XCTAssertNotNil(helloWorldStaticText)
-
     }
 
     func testLaunchPerformance() {

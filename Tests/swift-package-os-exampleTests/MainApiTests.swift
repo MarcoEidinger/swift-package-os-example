@@ -1,16 +1,16 @@
-import XCTest
 import swift_package_os_example
+import XCTest
 
 final class MainApiTests: XCTestCase {
     func testExample() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct
         // results.
-		var anyWorld: Any = "Hello, World!"
+        var anyWorld: Any = "Hello, World!"
         XCTAssertEqual(MainApi().text, anyWorld as! String)
     }
 
-	func testMeaningOfLife() {
+    func testMeaningOfLife() {
         XCTAssertEqual(MainApi().meaningOfLife, 42)
     }
 
