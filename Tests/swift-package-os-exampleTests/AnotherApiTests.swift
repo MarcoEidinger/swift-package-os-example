@@ -5,8 +5,8 @@
 //  Created by Eidinger, Marco on 6/5/20.
 //
 
-import XCTest
 import swift_package_os_example
+import XCTest
 
 class AnotherApiTests: XCTestCase {
     func testExample() {
@@ -23,5 +23,4 @@ class AnotherApiTests: XCTestCase {
     static var allTests = [
         ("testExample", testExample),
     ]
-
 }
