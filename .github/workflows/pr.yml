@@ -15,6 +15,7 @@ jobs:
     #   - name: Check for homebrew updates
     #     run: brew update
       - name: Cache Mint packages
+        id: mint-cache
         uses: actions/cache@v1
         with:
           path: ${{ env.MINT_PATH }}
@@ -23,9 +24,9 @@ jobs:
       - name: Install Mint
         run: |
           brew upgrade mint || brew install mint || true
-      - name: Install swiftformat via mint
-        run: |
-          mint bootstrap
+      - name: Install Mint dependencies
+        if: steps.mint-cache.outputs.cache-hit != 'true'
+        run: mint bootstrap
       - name: Format Swift code
         run: mint run swiftformat --verbose .
       - name: Verify formatted code is unchanged
