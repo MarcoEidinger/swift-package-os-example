@@ -12,8 +12,8 @@ jobs:
       MINT_PATH: ${{ github.workspace }}/mint
     steps:
       - uses: actions/checkout@v2
-      - name: Check for homebrew updates
-        run: brew update
+    #   - name: Check for homebrew updates
+    #     run: brew update
       - name: Cache Mint packages
         uses: actions/cache@v1
         with:
