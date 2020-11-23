@@ -8,8 +8,6 @@ jobs:
 
   CodeFormattingCheck:
     runs-on: macos-latest
-    env:
-      MINT_PATH: ${{ github.workspace }}/mint
     steps:
       - uses: actions/checkout@v2
     #   - name: Check for homebrew updates
@@ -18,7 +16,7 @@ jobs:
         id: mint-cache
         uses: actions/cache@v2
         with:
-          path: ${{ env.MINT_PATH }}
+          path: /usr/local/lib/mint
           key: ${{ runner.os }}-mint-${{ hashFiles('**/Mintfile') }}
           restore-keys: ${{ runner.os }}-mint-
       - name: Install Mint
